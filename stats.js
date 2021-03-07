@@ -5,10 +5,10 @@ function stats(out, ...nums) {
   let median;
   let sort = nums.sort();
   if (nums.length % 2 === 0) {
-    median = (sort[sort.length / 2] + sort[sort.length / 2 + 1]) / 2;
+    median = (sort[sort.length / 2 - 1] + sort[sort.length / 2]) / 2;
   } else {
     median = sort[(sort.length - 1) / 2];
   }
   // Mode
-  return {'mean': mean, 'median': median, /*'mode': mode, 'range': range*/};
+  return {'mean': mean, 'median': median/*, 'mode': mode, 'range': range*/};
 }
